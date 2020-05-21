@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: #ecf0f1;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -22,11 +23,25 @@ body {
   margin-bottom: 25px;
   border-radius: 5px;
   height: 130px;
-  background-color: white;
+  color: #ffffff;
+  text-shadow: 3px;
 }
 
+  .b-green{
+    background-color: #27AE60;
+  }
 
-.graph-1 {
+  .b-yellow{
+    background-color: #F1C40F;
+  }
+
+  .b-red{
+    background-color: #E74C3C;
+  }
+
+
+
+.graph {
   margin: 5px;
   display: inline-block;
   border-radius: 5px;
@@ -35,12 +50,11 @@ body {
   width: 61%;
 }
 
-.graph-2 {
-  margin: 5px;
-  display: inline-block;
-  border-radius: 5px;
-  height: 300px;
-  background-color: white;
+.g-1{
+  width: 61%;
+}
+
+.g-2{
   width: 30%;
 }
 
