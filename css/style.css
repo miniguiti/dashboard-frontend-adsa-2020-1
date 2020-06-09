@@ -16,6 +16,10 @@ body {
   background-color: #34495e;
 }
 
+.main{
+  transition: 0.5s;
+}
+
 .box {
   display: inline-block;
   width: 30%;
@@ -25,6 +29,10 @@ body {
   height: 130px;
   color: #ffffff;
   text-shadow: 3px;
+}
+
+.box:hover{
+  opacity: 0.5;
 }
 
   .b-green{
@@ -64,15 +72,51 @@ body {
   margin-top: 25px;
   border-radius: 5px;
   width: 92%;
-  height: 100px;
   background-color: white;
   margin-bottom: 25px;
 }
 
+/* SIDEBAR */
 .openbtn {
   font-size: 30px;
   cursor: pointer;
   color: white;
   padding: 10px 15px;
   border: none;
+}
+
+.sidebar{
+  height: 100%;
+  width: 0px;
+  background-color: #1f3244;
+  position: fixed; 
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.sidebar a{
+  display: block;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  padding: 10px; 
+}
+
+.sidebar a:hover{
+  color: #ffffff;
+  background-color: #818181;
+}
+
+
+.sidebar .closebtn{
+  font-size: 35px;
+  margin-left: 75%;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.icon{
+  display: inline-block;
+  margin-left: 5%;
+  color: #34495e;
 }

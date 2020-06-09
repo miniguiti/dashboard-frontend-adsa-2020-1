@@ -1,0 +1,47 @@
+.main-contato{
+    margin: auto;
+    width: 85%;
+}
+
+.main-contato h1{
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+form{
+    margin: 40px 0;
+    float: left;
+    width: 40%;
+}
+
+form label{
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.input-padrao{
+    display: block;
+    padding: 10px 25px;
+    width: 100%;
+}
+
+.btngreen{
+    width: 30%;
+    background-color: green;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.form-img{
+    background-image: url(../img/b-form.png);
+    float: right;
+    margin-top: 50px;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 650px;
+}
