@@ -45,3 +45,25 @@ form label{
     width: 50%;
     height: 650px;
 }
+
+.m-erro{
+    color: red;
+}
+
+.m-erro li{
+    list-style: none;
+    margin: 5px;
+    font-weight: bold;
+    background-color: #ff000047;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.m-acerto p{
+    color: white;
+    margin: 5px;
+    font-weight: bold;
+    background-color: green;
+    padding: 10px;
+    border-radius: 5px;
+}

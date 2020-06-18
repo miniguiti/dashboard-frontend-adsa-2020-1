@@ -25,36 +25,39 @@
     <div class="main-contato">
         <h1>Entre em contato</h1>
 
-        <form>
+        <form onsubmit="enviaContato()">
+            <!-- <span id="mensagemErro"></span> -->
+            <div id="mensagemAcerto" class="m-acerto"></div>
+            <ul id="mensagemErro" class="m-erro">
+       
+            </ul>
+            
             <label for="nomesobrenome"> Nome e Sobrenome:</label>
-            <input type="text" id="nomesobrenome" class="input-padrao" required>
+            <input type="text" id="nomesobrenome" class="input-padrao">
 
             <label for="email">E-mail:</label>
-            <input type="email" id="email" placeholder="seuemail@dominio.com" class="input-padrao" required> 
+            <input type="email" id="email" placeholder="seuemail@dominio.com" class="input-padrao"> 
 
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" placeholder="(00) 90000-0000" class="input-padrao" required>
+            <input type="text" id="telefone" placeholder="(00) 90000-0000" class="input-padrao">
 
             <label for="mensagem">Mensagem:</label>
-            <textarea  id="mensagem" cols="30" rows="10" class="input-padrao" required></textarea>
+            <textarea  id="mensagem" cols="30" rows="10" class="input-padrao"></textarea>
 
             <div>
                 <p>Como prefere o contato ?</p>
 
                 <label for="email-radio">
                     <input id="email-radio" type="radio"  name="contato" checked>E-mail
-                </label>
-                
+                </label>                
 
                 <label for="telefone-radio">
                     <input type="radio" id="telefone-radio" name="contato">Telefone:
-                </label>
-                
+                </label>                
 
                 <label for="whatsapp">
                     <input type="radio" id="whatsapp" name="contato">WhatsApp:
-                </label>
-                
+                </label>                
 
                 <label>
                     <input type="checkbox" checked> Receber novidades por e-mail 
@@ -67,5 +70,57 @@
         <div class="form-img">          
         </div>
     </div>
+
+    
   </body>
+  <script>
+      function enviaContato(){
+        var erros = validaContato();
+        mensagemErro.innerHTML = "";
+
+        if(erros.length > 0){
+          for(var i=0; i < erros.length; i++){
+              var erro = erros[i];
+              var li = document.createElement("li");
+              li.innerHTML = erro;
+
+              mensagemErro.appendChild(li);
+          }
+        }else{       
+          var p = document.createElement("p");   
+          p.innerHTML = "Sua mensagem foi enviada!";
+          mensagemAcerto.appendChild(p);
+
+          // Código que envia o que foi preenchido
+          // para o BD
+        }
+      }
+
+      function validaContato(){
+        var erros = [];
+        
+        if(!nomesobrenome.value){
+           erros.push("Preencha o nome");
+        }
+
+        if(!mensagem.value){
+          erros.push("Prencha a mensagem!") ;
+        }
+
+        if( (email.value.search("@") == -1) ||
+            (email.value.search(".") == -1 ) ||
+            (email.value.search(" ") >= 1)){
+              erros.push("O formato de e-mail é: usuario@dominio.com");
+        }
+
+        if((telefone.value.search("-") == -1) ||
+          telefone.value[telefone.value.length -6] != "-"
+        ){
+          erros.push("O formato do telefone é: 0090000-0000");
+        }
+
+
+        return erros;
+      }
+  </script>
 </html>
