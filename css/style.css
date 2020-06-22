@@ -16,7 +16,7 @@ body {
   background-color: #34495e;
 }
 
-.main{
+.main {
   transition: 0.5s;
 }
 
@@ -31,23 +31,21 @@ body {
   text-shadow: 3px;
 }
 
-.box:hover{
+.box:hover {
   opacity: 0.5;
 }
 
-  .b-green{
-    background-color: #27AE60;
-  }
+.b-green {
+  background-color: #27ae60;
+}
 
-  .b-yellow{
-    background-color: #F1C40F;
-  }
+.b-yellow {
+  background-color: #f1c40f;
+}
 
-  .b-red{
-    background-color: #E74C3C;
-  }
-
-
+.b-red {
+  background-color: #e74c3c;
+}
 
 .graph {
   margin: 5px;
@@ -58,11 +56,11 @@ body {
   width: 61%;
 }
 
-.g-1{
+.g-1 {
   width: 61%;
 }
 
-.g-2{
+.g-2 {
   width: 30%;
 }
 
@@ -85,38 +83,86 @@ body {
   border: none;
 }
 
-.sidebar{
+.sidebar {
   height: 100%;
   width: 0px;
   background-color: #1f3244;
-  position: fixed; 
+  position: fixed;
   overflow: hidden;
   transition: 0.5s;
 }
 
-.sidebar a{
+.sidebar a {
   display: block;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  padding: 10px; 
+  padding: 10px;
 }
 
-.sidebar a:hover{
+.sidebar a:hover {
   color: #ffffff;
   background-color: #818181;
 }
 
-
-.sidebar .closebtn{
+.sidebar .closebtn {
   font-size: 35px;
   margin-left: 75%;
   text-align: center;
   padding-top: 5px;
 }
 
-.icon{
+.icon {
   display: inline-block;
   margin-left: 5%;
   color: #34495e;
+}
+
+/* NOTIFICAÇÃO */
+.notification {
+  width: 480px;
+  right: 0;
+  position: fixed;
+  margin: 30px;
+}
+
+.notification-item {
+  background-color: #fff;
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: -1px 0px 25px 4px #00000057;
+  transition: 0.5s;  
+  margin-bottom: 20px;
+}
+
+.notification-icon{
+  background-color: #d80909;
+  margin-right: 20px;
+  padding: 26px;
+  border-radius: 5px 0px 0px 5px;
+  color: #fff;
+}
+
+.green{
+  background-color: green;
+}
+
+#font-green{
+  color: green;
+}
+
+.notification-item h3,
+.notification-item h5{
+  margin: 10px;
+}
+
+.notification-item h3{
+  color: #d80909;
+}
+
+
+/* ANIMAÇÃO */
+.notification-item:hover{
+  transform: scale(0.95);
 }
